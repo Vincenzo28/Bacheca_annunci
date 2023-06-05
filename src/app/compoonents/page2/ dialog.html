@@ -1,0 +1,49 @@
+<div style="padding: 10px">
+  <h1 mat-dialog-title>Nuovo annuncio</h1>
+  <form [formGroup]="dialogForm" (ngSubmit)="onSubmit()">
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      "
+    >
+      <div
+        mat-dialog-content
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <input
+          class="inputDialog"
+          type="text"
+          name="title"
+          placeholder="Titolo"
+          id=""
+         formControlName="title"
+          required
+        />
+        <input
+          class="inputDialog"
+          type="text"
+          name="description"
+          placeholder="Descrizione"
+          id=""
+         formControlName="description"
+          required
+        />
+      </div>
+      <div mat-dialog-actions>
+        <button class="buttonDialog" type="submit" mat-button mat-dialog-close cdkFocusInitial>
+          Pubblica
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
